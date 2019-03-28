@@ -27,9 +27,9 @@ namespace TelemetrySample
             // Set version if needed
             //tc.Context.Component.Version = Application.ProductVersion;
 
-            // Set other data if needed
-            tc.Context.User.Id = Environment.UserName;
-            tc.Context.Device.OperatingSystem = Environment.OSVersion.ToString();
+            // Set other data if needed. Double check that you have permission to collect PII data like UserName
+            //tc.Context.User.Id = Environment.UserName;
+            //tc.Context.Device.OperatingSystem = Environment.OSVersion.ToString();
         }
 
         public static void Flush() => tc.Flush();
